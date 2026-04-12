@@ -22,10 +22,12 @@ Some familiarity with functional programming (Haskell, ML, or similar) is helpfu
 
 ## Setup
 
-Install Agda and the standard library:
+Install Agda:
 
 - [Agda installation guide](https://agda.readthedocs.io/en/latest/getting-started/installation.html)
 - Recommended editor: VS Code with the [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode) extension, or Emacs with [agda2-mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
+
+The course does not use the standard library. Friday's material on cubical type theory requires the [Cubical Agda library](https://github.com/agda/cubical).
 
 The exercises use Agda's `{! !}` hole syntax — fill in the holes to complete the proofs.
 
