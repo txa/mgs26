@@ -121,7 +121,7 @@ record Monoid : Set₁ where
 open Monoid
 
 mon-plus : Monoid
-X mon-plus = ℕ
+X mon-pl    s = ℕ
 e mon-plus = zero
 _o_ mon-plus = _+_
 lneutrX mon-plus = lneutr
