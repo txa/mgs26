@@ -53,6 +53,7 @@ emb = {!   !}
 
 test2 : Fin 4
 test2 = emb {3} (suc zero)
+-- suc zero
 
 -- inv maps Fin n to Fin n reversing the order of elements
 inv : Fin n → Fin n
@@ -60,6 +61,8 @@ inv = {!   !}
 
 test3 : Fin 4
 test3 = inv {4} (suc zero)
+-- suc (suc zero)
+
 -- transposing a matrix 
 
 Matrix : ℕ → ℕ → Set {- Matrix m n is an m x n Matrix -}
