@@ -46,18 +46,32 @@ J : (M : (a b : A) → a ≡ b → Set)
   → {a b : A} (p : a ≡ b) → M a b p
 J M mr refl = mr 
 
+JR : (M : (a b : A) → Set) 
+  → ({a : A} → M a a)
+  → {a b : A} → (a ≡ b) → M a b 
+JR M mr p = J (λ a b _ → M a b) mr p
+
 K : (M : (a : A) → a ≡ a → Set) 
   → ({a : A} → M a refl)
   → {a : A} (p : a ≡ a) → M a p
 K M mr refl = mr
 
+-- J2K : (M : (a : A) → a ≡ a → Set) 
+--   → ({a : A} → M a refl)
+--   → {a : A} (p : a ≡ a) → M a p
+-- J2K M mr p = J {!   !} {!   !} {!   !}
+
 -- solutions
 
 sym-j : (a b : A) → a ≡ b → b ≡ a
-sym-j a b = {!   !}
+sym-j a b = J (λ x y _ → y ≡ x) refl
 
 trans-j : (a b c : A) → a ≡ b → b ≡ c → a ≡ c
 trans-j a b c = {!   !}
+
+trans-jj : (a b c : A) → a ≡ b → b ≡ c → a ≡ c
+trans-jj a b c p q = J (λ x y _ → y ≡ c → x ≡ c) (λ x → x) p q 
+
 
 uip-jk : (a b : A)(p q : a ≡ b) → p ≡ q
 uip-jk a b = {!   !}
